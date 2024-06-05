@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: 'FuenteEspecial';
+  src: url('./fonts/CormorantGaramond-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuentePrincipal';
+  src: url('./fonts/HindSiliguri-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+:root{
+  --Blanco: #EBEBEB;
+  --Dorado: #8C6E4A;
+  --Negro: #000;
+
+}
+
