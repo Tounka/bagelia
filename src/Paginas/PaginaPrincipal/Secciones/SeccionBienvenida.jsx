@@ -19,14 +19,14 @@ const TextoBienvenida = styled.h3`
 
 `
 const ContenedorBg = styled.div`
-  position: fixed;
-  top: 50%;
+  position: absolute;
+  top: 45%;
   left: 50%;
   height: 50%;
   min-height: 450px;
   width: 60%;
   min-width: 350px;
-  max-width: 800px;
+  max-width: 500px;
   background-color: #8c6e4aa3;
   border-radius: 50% 50% 0 0;
   z-index: -1;

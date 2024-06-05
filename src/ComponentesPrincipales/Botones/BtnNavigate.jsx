@@ -6,6 +6,9 @@ const BtnStyled = styled.button`
     height: 100%;
     border: none;
     cursor:pointer;
+
+    font-size: 16px;
+    border: ${props => props.border ? '1px solid black' : ''};
 `
 const ContenedorBtnMenu = styled.div`
     min-width: 120px;
@@ -75,7 +78,7 @@ const ContenedorBtnPaginaPrincipal = styled.div`
     cursor:pointer;
 `
 
-export const BtnNavigatePaginaPrincipal = ({txt, path}) =>{
+export const BtnNavigatePaginaPrincipal = ({txt, path, border}) =>{
     const navigate = useNavigate();
     const handleClickNavigate = () => {
         
@@ -89,7 +92,7 @@ export const BtnNavigatePaginaPrincipal = ({txt, path}) =>{
     }
     return(
         <ContenedorBtnPaginaPrincipal>
-            <BtnStyled onClick={handleClickNavigate}>
+            <BtnStyled onClick={handleClickNavigate} border={border}>
                 {txt}
             </BtnStyled>
         </ContenedorBtnPaginaPrincipal>

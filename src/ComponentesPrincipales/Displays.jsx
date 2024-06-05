@@ -6,7 +6,9 @@ const DisplayPrincipalStyled = styled.div`
     flex-direction:column;
 
     width: 100%;
-    height: calc(100% - 80px);
+    
+    height: auto;
+    max-height: auto;
     margin-top: 80px;
 ` 
 export const DisplayPrincipal = ({children}) =>{
