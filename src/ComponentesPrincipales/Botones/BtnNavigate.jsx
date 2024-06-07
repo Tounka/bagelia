@@ -13,6 +13,7 @@ const BtnStyled = styled.button`
 const ContenedorBtnMenu = styled.div`
     min-width: 120px;
     height: 100%;
+   
      @media (max-width: 600px) {
         width: ${props => props.principal ? '130px' : 'auto'};;
         min-width: auto;
@@ -70,7 +71,7 @@ const ContenedorBtnPaginaPrincipal = styled.div`
     width: 250px;
     height: 60px;
     margin-top: 36px;
-
+    max-width: 100%;
     background-color: var(--Blanco);
     color: var(--Negro);
 

@@ -60,16 +60,35 @@ const TextoDerechoSubseccionRegalo = styled.p`
     font-size: ${props => props.titular ? '36px' : '16px'};
     line-height: ${props => props.espaciado ? '16px' : 'null'};
     margin: 0;
-    
+    justify-content:center;
     font-family: ${props => props.titular ? 'FuenteEspecial' : 'null'};
     font-weight: ${props => props.titular ? 'Bold' : 'null'};
-   
-    max-width: 200px;
+    margin-right:auto;
+    width: auto;
+    max-width:200px;
+    display: ${props => props.ocultar ? 'none' : ''};
     
+    @media (min-width: 1124px) {
+
+        max-width:371px;
+
+    }
+    @media (max-width: 900px) {
+
+        max-width: 150px;
+
+    }
     @media (max-width: 800px) {
         max-width: 700px;
         margin-top: 20px;
+        text-align:center;
+        width: 100%;
+
+        display: ${props => props.ocultar ? 'block' : ''};
+
+        
     }
+  
     
 
 `
@@ -80,9 +99,15 @@ const ContenedorTituloDerecho =styled.div`
     margin-top: 30px;
     margin-left: -50px;
     align-items:Center;
+    justify-content:center;
+    flex-wrap: wrap;
     @media (max-width: 800px) {
         display:none;
         
+    }
+     @media (max-width: 850px) {
+       margin-right:auto;
+        flex-direction:column;
     }
 
 `
@@ -97,7 +122,7 @@ export const SeccionRegalo = () =>{
                     <TextoGenerico>Una bolsa es un regalo versátil y con estilo. Va más allá de su función práctica, siendo un símbolo de cuidado y conexión. Es una forma simple pero significativa de expresar aprecio y cariño.</TextoGenerico>
                     </div>
                     <Linea />
-                    <TextoDerechoSubseccionRegalo titular>EL REGALO PERFECTO</TextoDerechoSubseccionRegalo>
+                    <TextoDerechoSubseccionRegalo titular ocultar>EL REGALO PERFECTO</TextoDerechoSubseccionRegalo>
                     <BtnNavigatePaginaPrincipal path={'catalogo'} txt={'Ve nuestro catalogo'} border />
                 </ContenedorSubseccionRegalo>
 
