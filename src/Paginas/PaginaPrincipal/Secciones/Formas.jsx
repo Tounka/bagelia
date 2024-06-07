@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
 
 // Definimos la animación de pulsación
@@ -55,7 +55,22 @@ export const Puerta = styled.div`
   min-width: 350px;
   max-width: 450px;
   background-color: var(--Dorado);
-  border-radius: 50% 50% 0 0;
+  border-radius: 50% 50% 0% 0% / 35% 35% 10% 10%  ;
   
   overflow:hidden;
+
+    @media (max-width: 800px) {
+      width:100%;
+      max-width: auto;
+    }
 `;
+
+export const Linea = styled.hr`
+    width:100%;
+    
+    color:  var(--Dorado);
+    border-color:  var(--Dorado);
+    border-width: 5px; /* Ajusta el grosor del borde */
+    
+    border-style:dashed;
+`

@@ -30,6 +30,9 @@ export const ContenedorBienvenida = styled.div`
 
 export const ContenedorSeccion = styled.div`
     height: calc(100vh - 80px);
+    @media (max-width: 800px) {
+      height: auto;
+    }
 `
 export const SubtituloTexto = styled.h2`
     font-size: ${props => props.size ? props.size : '24px'};
