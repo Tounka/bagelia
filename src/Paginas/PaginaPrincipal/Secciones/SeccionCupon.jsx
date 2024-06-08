@@ -19,6 +19,9 @@ const ContenedorSeccionCupon = styled.div`
     height: 90%;
     gap: 30px;
     position: relative;
+    @media (max-width: 800px) {
+        width: 90%;
+    }
 `;
 
 const ContenedorCupon = styled.div`

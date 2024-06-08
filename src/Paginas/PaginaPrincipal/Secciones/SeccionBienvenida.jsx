@@ -21,6 +21,7 @@ const TextoBienvenida = styled.h3`
 const ContenedorBg = styled.div`
   position: absolute;
   top: 45%;
+  top: 45%;
   left: 50%;
   height: 50%;
   min-height: 450px;
@@ -31,6 +32,14 @@ const ContenedorBg = styled.div`
   border-radius: 50% 50% 0 0;
   z-index: -1;
   transform: translate(-50%, -50%);
+
+    @media (max-width: 355px) {
+        
+        min-width: 200px;
+        width: 300px;
+      
+    }
+
 `;
 
 

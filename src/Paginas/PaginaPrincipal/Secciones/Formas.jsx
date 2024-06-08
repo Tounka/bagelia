@@ -54,6 +54,7 @@ export const Puerta = styled.div`
   width: 60%;
   min-width: 350px;
   max-width: 450px;
+  
   background-color: var(--Dorado);
   border-radius: 50% 50% 0% 0% / 35% 35% 10% 10%  ;
   
@@ -61,8 +62,10 @@ export const Puerta = styled.div`
 
     @media (max-width: 800px) {
       width:100%;
-      max-width: auto;
+      min-width: 100%;
+      
     }
+
 `;
 
 export const Linea = styled.hr`
@@ -73,4 +76,18 @@ export const Linea = styled.hr`
     border-width: 5px; /* Ajusta el grosor del borde */
     
     border-style:dashed;
+`
+
+export const ContenedorImgCompromisos = styled.div`
+    border-radius: 0% 55% 0% 0% / 25% 29% 25% 25%;
+    height: 100%;
+    width:100%;
+
+    @media (max-width: 800px) {
+        height: 400px;
+        border-radius: 0% 25% 0% 0% / 25% 29% 25% 25%;
+        background-position: center;
+    }
+    overflow: hidden;
+    background-color: var(--Dorado);
 `
