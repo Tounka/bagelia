@@ -80,7 +80,7 @@ export const Linea = styled.hr`
 
 export const ContenedorImgCompromisos = styled.div`
     border-radius: 0% 55% 0% 0% / 25% 29% 25% 25%;
-    height: 100%;
+    height: calc(100% - 80px);
     width:100%;
 
     @media (max-width: 800px) {

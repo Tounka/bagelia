@@ -7,18 +7,14 @@ import {ContenedorImgCompromisos} from './Formas'
 import { ImgPicture } from "../../../ComponentesPrincipales/Img";
 import imgpSeccionCompromisos from '../../../img/bolsavar2.jpg'
 const ContenedorCompromisos = styled(ContenedorSeccion)`
-    display:grid;
-    grid-template-columns: 3fr 2fr;
-    @media (max-width: 800px) {
-        grid-template-columns: 1fr;
-    }
+    
     width: 100%;
     padding: 30px;
 `
 const ContenedorHijoCompromisos = styled.div`
     display:flex;
     flex-direction:column;
-    height: 100%;
+    height: calc(100% - 80px);
     width: 100%;
     
 `
@@ -59,11 +55,22 @@ const ContenedorItems = styled.div`
     height:100%;
     flex-direction:column;
     justify-content: space-around;
-
+    
     padding: ${props => props.contenedor2 ? '30px' : '0px'};
     @media (max-width: 800px) {
-        margin-top: 20px;
+        
+        gap: 30px;
         padding: ${props => props.contenedor2 ? '0' : '0px'};
+    }
+`
+const ContenedorPrincipalCompromisos = styled.div`
+display:grid;
+    width: 100%;
+    height: 100%;
+        grid-template-columns: 3fr 2fr;
+    @media (max-width: 800px) {
+        gap: 30px;
+        grid-template-columns: 1fr;
     }
 `
 const ItemLista = ({icono, txt,tituloItem}) =>{
@@ -82,33 +89,36 @@ const ItemLista = ({icono, txt,tituloItem}) =>{
 export const SeccionCompromisos = ()=>{
     return(
         <ContenedorCompromisos>
-            <ContenedorHijoCompromisos>
-                <TituloSeccion>Nuestros Compromisos</TituloSeccion>
-                <ContenedorItems>
-                    <ItemLista 
-                    icono={<ImPriceTag fontSize={'52px'} color={'var(--Dorado)'} />} 
-                    tituloItem={'Precio'} 
-                    txt={'En nuestro negocio de bolsas, encontrarás precios que se adaptan a cualquier presupuesto. Nos esforzamos por ofrecer productos de calidad a precios asequibles, asegurando que cada cliente obtenga el mejor valor por su dinero.'} />
+            <ContenedorPrincipalCompromisos>
+                  <ContenedorHijoCompromisos>
                     
-                    <ItemLista 
-                    icono={<IoDiamondSharp fontSize={'52px'} color={'var(--Dorado)'} />} 
-                    tituloItem={'Calidad'} 
-                    txt={'Nos comprometemos a ofrecerte productos de la más alta calidad, elaborados con materiales duraderos y técnicas de fabricación avanzadas. Cada bolsa que fabricamos pasa por estrictos controles de calidad para garantizar tu satisfacción y confianza en nuestro producto.'} />
+                    <TituloSeccion>Nuestros Compromisos</TituloSeccion>
+                    <ContenedorItems>
+                        <ItemLista 
+                        icono={<ImPriceTag fontSize={'52px'} color={'var(--Dorado)'} />} 
+                        tituloItem={'Precio'} 
+                        txt={'En nuestro negocio de bolsas, encontrarás precios que se adaptan a cualquier presupuesto. Nos esforzamos por ofrecer productos de calidad a precios asequibles, asegurando que cada cliente obtenga el mejor valor por su dinero.'} />
+                        
+                        <ItemLista 
+                        icono={<IoDiamondSharp fontSize={'52px'} color={'var(--Dorado)'} />} 
+                        tituloItem={'Calidad'} 
+                        txt={'Nos comprometemos a ofrecerte productos de la más alta calidad, elaborados con materiales duraderos y técnicas de fabricación avanzadas. Cada bolsa que fabricamos pasa por estrictos controles de calidad para garantizar tu satisfacción y confianza en nuestro producto.'} />
 
-                    <ItemLista 
-                    icono={<TbTruckDelivery fontSize={'52px'} color={'var(--Dorado)'} />} 
-                    tituloItem={'Precio'} 
-                    txt={'Desde la realización del pedido hasta la entrega, nos comprometemos a agilizar cada proceso para que tus bolsas lleguen a tus manos en el menor tiempo posible, sin comprometer la calidad.'} />
+                        <ItemLista 
+                        icono={<TbTruckDelivery fontSize={'52px'} color={'var(--Dorado)'} />} 
+                        tituloItem={'Precio'} 
+                        txt={'Desde la realización del pedido hasta la entrega, nos comprometemos a agilizar cada proceso para que tus bolsas lleguen a tus manos en el menor tiempo posible, sin comprometer la calidad.'} />
+                    </ContenedorItems>
+                
+                </ContenedorHijoCompromisos>
+
+                <ContenedorItems contenedor2>
+                        <ContenedorImgCompromisos>
+                            <ImgPicture src={imgpSeccionCompromisos} alt={'Imagen '} />
+                        </ContenedorImgCompromisos>
+
                 </ContenedorItems>
-            
-            </ContenedorHijoCompromisos>
-
-            <ContenedorItems contenedor2>
-                    <ContenedorImgCompromisos>
-                        <ImgPicture src={imgpSeccionCompromisos} alt={'Imagen '} />
-                    </ContenedorImgCompromisos>
-
-            </ContenedorItems>
+            </ContenedorPrincipalCompromisos>
 
         </ContenedorCompromisos>
     )
