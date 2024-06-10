@@ -10,7 +10,7 @@ const MenuStyled = styled.div`
 
     font-size: 24px;
     color: var(--Negro);
-    background-color: var(--Blanco);
+    background-color: var(--Blanco2);
 
     position: fixed;
     top: 0;

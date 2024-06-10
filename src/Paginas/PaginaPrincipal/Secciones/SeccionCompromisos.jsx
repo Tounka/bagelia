@@ -7,7 +7,7 @@ import {ContenedorImgCompromisos} from './Formas'
 import { ImgPicture } from "../../../ComponentesPrincipales/Img";
 import imgpSeccionCompromisos from '../../../img/bolsavar2.jpg'
 const ContenedorCompromisos = styled(ContenedorSeccion)`
-    
+    background-color: var(--Blanco);
     width: 100%;
     padding: 30px;
 `
@@ -52,7 +52,7 @@ const ContedorTextoItem = styled.div`
 `
 const ContenedorItems = styled.div`
     display:flex;
-    height:100%;
+    height:calc(100% - 80px);
     flex-direction:column;
     justify-content: space-around;
     
@@ -106,7 +106,7 @@ export const SeccionCompromisos = ()=>{
 
                         <ItemLista 
                         icono={<TbTruckDelivery fontSize={'52px'} color={'var(--Dorado)'} />} 
-                        tituloItem={'Precio'} 
+                        tituloItem={'Rapidez'} 
                         txt={'Desde la realización del pedido hasta la entrega, nos comprometemos a agilizar cada proceso para que tus bolsas lleguen a tus manos en el menor tiempo posible, sin comprometer la calidad.'} />
                     </ContenedorItems>
                 

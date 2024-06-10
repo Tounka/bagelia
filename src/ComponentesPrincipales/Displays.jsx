@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Menu } from "./MenuSuperior";
+import { Footer } from "./Footer";
 
 const DisplayPrincipalStyled = styled.div`
     display:flex;
@@ -16,6 +17,7 @@ export const DisplayPrincipal = ({children}) =>{
         <DisplayPrincipalStyled>
             <Menu />
             {children}
+            <Footer />
         </DisplayPrincipalStyled>
     )
 }

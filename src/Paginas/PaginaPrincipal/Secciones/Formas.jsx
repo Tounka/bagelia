@@ -80,7 +80,7 @@ export const Linea = styled.hr`
 
 export const ContenedorImgCompromisos = styled.div`
     border-radius: 0% 55% 0% 0% / 25% 29% 25% 25%;
-    height: calc(100% - 80px);
+    height: calc(100% );
     width:100%;
 
     @media (max-width: 800px) {
@@ -92,16 +92,21 @@ export const ContenedorImgCompromisos = styled.div`
     background-color: var(--Dorado);
 `
 export const PuertaSeccionContacto = styled.div`
-  height: 50%;
+  height: 70%;
   min-height: 500px;
-  width: 60%;
+  width: 80%;
   min-width: 350px;
-  max-width: 450px;
-  
-  background-color: var(--Dorado);
-  border-radius: 50% 50% 0% 0% / 35% 35% 10% 10%  ;
-  
+  max-width: 800px;
+  padding: 30px 10px;
+  margin-bottom: 80px;
+  background-color: var(--Blanco2);
+  border-radius: 50% 50% 0% 0% / 60% 60% 10% 10%  ;
   overflow:hidden;
+
+  @media (max-width: 800px) {
+    border-radius: 50% 50% 0% 0% / 40% 40% 10% 10%  ;
+      
+    }
 
     @media (max-width: 600px) {
       width:100%;

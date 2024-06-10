@@ -4,7 +4,7 @@ import { BtnNavigatePaginaPrincipal } from "../../../ComponentesPrincipales/Boto
 import {  Puerta, Linea  } from "./Formas";
 import {ImgPicture} from '../../../ComponentesPrincipales/Img';
 import { SlDiamond } from "react-icons/sl";
-import img from '../../../img/imgRam.jpg'
+import img from '../../../img/imgRam2.jpg'
 const ContenedorRegalo = styled.div`
     display: grid;
     grid-template-columns: 2fr 4fr;
