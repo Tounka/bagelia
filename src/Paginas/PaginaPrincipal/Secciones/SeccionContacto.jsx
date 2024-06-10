@@ -21,6 +21,8 @@ const TituloTextoContacto = styled.h2`
     font-size: 68px;
     font-family: 'FuenteEspecial';
     text-align:center;
+    margin-bottom: 10px;
+    margin-top: 20px;
 `
 const TxtContacto = styled.p`
     font-size: ${props => props.titular ? '28px' : '26px'};

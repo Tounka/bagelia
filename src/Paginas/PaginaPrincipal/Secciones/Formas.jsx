@@ -96,7 +96,7 @@ export const PuertaSeccionContacto = styled.div`
   min-height: 500px;
   width: 80%;
   min-width: 350px;
-  max-width: 800px;
+  max-width: 700px;
   padding: 30px 10px;
   margin-bottom: 80px;
   background-color: var(--Blanco2);

@@ -9,6 +9,7 @@ import imgpSeccionCompromisos from '../../../img/bolsavar2.jpg'
 const ContenedorCompromisos = styled(ContenedorSeccion)`
     background-color: var(--Blanco);
     width: 100%;
+    height: calc(100vh - 80px);
     padding: 30px;
 `
 const ContenedorHijoCompromisos = styled.div`
@@ -53,6 +54,7 @@ const ContedorTextoItem = styled.div`
 const ContenedorItems = styled.div`
     display:flex;
     height:calc(100% - 80px);
+    max-height: calc(100vh - 80px) ;
     flex-direction:column;
     justify-content: space-around;
     
