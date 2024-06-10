@@ -91,3 +91,21 @@ export const ContenedorImgCompromisos = styled.div`
     overflow: hidden;
     background-color: var(--Dorado);
 `
+export const PuertaSeccionContacto = styled.div`
+  height: 50%;
+  min-height: 500px;
+  width: 60%;
+  min-width: 350px;
+  max-width: 450px;
+  
+  background-color: var(--Dorado);
+  border-radius: 50% 50% 0% 0% / 35% 35% 10% 10%  ;
+  
+  overflow:hidden;
+
+    @media (max-width: 600px) {
+      width:100%;
+      min-width: 100%;
+      
+    }
+`
