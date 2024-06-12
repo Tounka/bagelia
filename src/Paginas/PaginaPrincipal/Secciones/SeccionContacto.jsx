@@ -70,7 +70,7 @@ const BtnRedSocial = ({txt, link}) => {
 
 export const SeccionContacto = () => {
     return(
-        <ContenedorSeccionContacto>
+        <ContenedorSeccionContacto id="Contacto">
                 <PuertaSeccionContacto>
                     <ContenedorTextoContacto>
                         <TituloTextoContacto>Contacto</TituloTextoContacto>

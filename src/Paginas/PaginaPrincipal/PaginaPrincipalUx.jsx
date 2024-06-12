@@ -13,7 +13,7 @@ export const PaginaPrincipalUx = () =>{
             <SeccionEnvio />
             <SeccionCompromisos />
             <SeccionCupon />
-            <SeccionContacto />
+            <SeccionContacto  />
         </>
     )
 }

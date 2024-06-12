@@ -5,6 +5,10 @@ const FooterStyled = styled.div`
     height: 80px;
     background-color: var(--Dorado);
     font-size: 22px;
+
+    @media (max-width: 400px) {
+        font-size: 16px;
+    }
     color: var(--Blanco);
 
     display: flex;

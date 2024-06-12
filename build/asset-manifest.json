@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.25ab523f.css",
-    "main.js": "/static/js/main.072314f5.js",
+    "main.js": "/static/js/main.c990254e.js",
     "static/media/bolsavar2.jpg": "/static/media/bolsavar2.fedf3f364761aa78d274.jpg",
     "static/media/CormorantGaramond-Light.ttf": "/static/media/CormorantGaramond-Light.5a46964bcf8ba603b8c0.ttf",
     "static/media/delivery.jpg": "/static/media/delivery.cb5d2f598a3a41343deb.jpg",
@@ -13,10 +13,10 @@
     "static/media/Cupon.jpg": "/static/media/Cupon.3ea775556e6753853b20.jpg",
     "index.html": "/index.html",
     "main.25ab523f.css.map": "/static/css/main.25ab523f.css.map",
-    "main.072314f5.js.map": "/static/js/main.072314f5.js.map"
+    "main.c990254e.js.map": "/static/js/main.c990254e.js.map"
   },
   "entrypoints": [
     "static/css/main.25ab523f.css",
-    "static/js/main.072314f5.js"
+    "static/js/main.c990254e.js"
   ]
 }

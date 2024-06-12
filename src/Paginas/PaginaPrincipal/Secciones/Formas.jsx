@@ -102,7 +102,6 @@ export const PuertaSeccionContacto = styled.div`
   background-color: var(--Blanco2);
   border-radius: 50% 50% 0% 0% / 60% 60% 10% 10%  ;
   overflow:hidden;
-
   @media (max-width: 800px) {
     border-radius: 50% 50% 0% 0% / 40% 40% 10% 10%  ;
       

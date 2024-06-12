@@ -21,3 +21,10 @@ export const DisplayPrincipal = ({children}) =>{
         </DisplayPrincipalStyled>
     )
 }
+
+export const ContenedorPrincipal = styled.div`
+    height: calc(100vh - 80px);
+    @media (max-width: 800px) {
+      height: auto;
+    }
+`
