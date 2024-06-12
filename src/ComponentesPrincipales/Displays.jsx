@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import { Menu } from "./MenuSuperior";
+import { Menu, MenuAdmi } from "./MenuSuperior";
 import { Footer } from "./Footer";
+import { useState } from "react";
 
 const DisplayPrincipalStyled = styled.div`
     display:flex;
@@ -8,14 +9,28 @@ const DisplayPrincipalStyled = styled.div`
 
     width: 100%;
     
-    height: auto;
-    max-height: auto;
+    height: 100%;
+    max-height: calc(100vh-  80px);
     margin-top: 80px;
+
+    
 ` 
 export const DisplayPrincipal = ({children}) =>{
     return(
         <DisplayPrincipalStyled>
             <Menu />
+            {children}
+            <Footer />
+        </DisplayPrincipalStyled>
+    )
+}
+
+
+export const DisplayAdmi = ({children}) =>{
+    
+    return(
+        <DisplayPrincipalStyled>
+            <MenuAdmi />
             {children}
             <Footer />
         </DisplayPrincipalStyled>
@@ -28,3 +43,13 @@ export const ContenedorPrincipal = styled.div`
       height: auto;
     }
 `
+
+export const DisplayPrincipalAdmi = ({children}) =>{
+    return(
+        <DisplayPrincipalStyled>
+            <Menu />
+            {children}
+            <Footer />
+        </DisplayPrincipalStyled>
+    )
+}

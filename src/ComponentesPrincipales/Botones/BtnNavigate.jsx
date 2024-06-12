@@ -66,7 +66,26 @@ export const BtnNavigateMenu = ({path, txt, principal}) =>{
   
     )
 }
-
+export const BtnSwitchMenuAdmi = ({path, txt, principal, setPagina}) =>{
+    
+    const handleClickSwitch = () => {
+        setPagina(path);
+        
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" // Para que el scroll sea suave
+        });
+        
+    }
+    return(
+        <ContenedorBtnMenu>
+                  <BtnStyledMenu principal={principal} onClick={() => handleClickSwitch()}>
+                    {txt}
+                  </BtnStyledMenu>
+        </ContenedorBtnMenu>
+  
+    )
+}
 const ContenedorBtnPaginaPrincipal = styled.div`
     width: 250px;
     height: 60px;

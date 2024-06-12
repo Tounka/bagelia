@@ -1,5 +1,8 @@
 import styled from "styled-components";
-import {BtnNavigateMenu} from "../ComponentesPrincipales/Botones/BtnNavigate"
+import {BtnNavigateMenu, BtnSwitchMenuAdmi} from "../ComponentesPrincipales/Botones/BtnNavigate"
+import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { PaginaContext } from "../Paginas/PaginaAdmin/Contexto";
 const MenuStyled = styled.div`
     display: flex;
     justify-content: space-evenly;
@@ -27,6 +30,17 @@ export const Menu = () =>{
             <BtnNavigateMenu txt='Bolsas' path='bolsas'  />
             <BtnNavigateMenu txt='BAGELIA' path='' principal={true} />
             <BtnNavigateMenu txt='Contacto' path='contacto'  />
+        </MenuStyled>
+    )
+}
+export const MenuAdmi = () =>{
+    const { pagina, setPagina } = useContext(PaginaContext);
+    
+    return(
+        <MenuStyled>
+            <BtnSwitchMenuAdmi txt='Modificar' path='modificar_admi' setPagina={setPagina} />
+            <BtnSwitchMenuAdmi txt='BAGELIA' path='' principal={true} setPagina={setPagina} />
+            <BtnSwitchMenuAdmi txt='Agregar' path='agregar_admi'  setPagina={setPagina} />
         </MenuStyled>
     )
 }
