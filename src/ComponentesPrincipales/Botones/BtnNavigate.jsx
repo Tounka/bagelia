@@ -70,7 +70,7 @@ export const BtnSwitchMenuAdmi = ({path, txt, principal, setPagina}) =>{
     
     const handleClickSwitch = () => {
         setPagina(path);
-        
+
         window.scrollTo({
             top: 0,
             behavior: "smooth" // Para que el scroll sea suave
@@ -118,3 +118,20 @@ export const BtnNavigatePaginaPrincipal = ({txt, path, border}) =>{
         </ContenedorBtnPaginaPrincipal>
     )
 }
+
+export const BtnSubmit = styled.button`
+    display: flex;
+    flex-direction: column;
+    width: 260px;
+    height: 60px;
+    border: none;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: var(--Rosado);
+
+    font-size: 24px;
+    font-weight: bold;
+`

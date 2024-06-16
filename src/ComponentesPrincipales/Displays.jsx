@@ -24,7 +24,7 @@ export const DisplayPrincipal = ({children}) =>{
         </DisplayPrincipalStyled>
     )
 }
-
+ 
 
 export const DisplayAdmi = ({children}) =>{
     

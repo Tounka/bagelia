@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import imageCompression from 'browser-image-compression';
 import { useFormikContext, Form, Field} from 'formik';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 // Estilos para el componente (adaptar según tu preferencia)
 export const TxtTitular = styled.p`
@@ -21,6 +21,8 @@ export const ContenedorForm = styled(Form)`
   max-height: auto;
   display: flex;
   flex-direction: column;
+    justify-content:center;
+    align-items:center;
   gap: 20px;
   border-radius: 30px 0 30px 0;
 
@@ -224,6 +226,8 @@ const FieldTextAreaStyled = styled.textarea`
   background-color: var(--Blanco);
   height: 120px;
   width: 100%;
+  box-sizing: border-box ;
+  padding-left: 10px;
   resize: vertical;
   overflow-y: auto;
   white-space: pre-wrap;
@@ -247,11 +251,47 @@ export const InputTextArea = ({ name, txt, placeholder }) => {
   return (
     <ContenedorInputTextArea>
       <LabelInputFile htmlFor={name}>{txt}</LabelInputFile>
-      <FieldTextAreaStyled
+      <Field
+        as={FieldTextAreaStyled}
         id={name}
         name={name}
         placeholder={placeholder}
       />
     </ContenedorInputTextArea>
+  );
+};
+
+const shakeAnimation = keyframes`
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-5px); }
+  50% { transform: translateY(0); }
+  75% { transform: translateY(5px); }
+  100% { transform: translateY(0); }
+`;
+
+const MensajeErrorWrapper = styled.div`
+  color: white;
+  background-color: brown;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 16px;
+  animation: ${shakeAnimation} 0.5s ease-in-out;
+`;
+
+export const CompErrores = ({ errores }) => {
+  const [erroresArray, setErroresArray] = useState([]);
+
+  useEffect(() => {
+    const newErroresArray = Object.values(errores);
+    setErroresArray(newErroresArray);
+  }, [errores]);
+
+  // Usamos una clave única basada en la longitud del array de errores
+  const key = erroresArray.length > 0 ? erroresArray.length : 'default';
+
+  return (
+    <MensajeErrorWrapper key={key}>
+      {erroresArray.length > 0 && erroresArray[0]}
+    </MensajeErrorWrapper>
   );
 };
