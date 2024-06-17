@@ -2,15 +2,20 @@ import styled from "styled-components";
 import { ImgPicture } from "../../../ComponentesPrincipales/Img";
 const CardItemStyled = styled.div`
     height: 100%;
+    min-height: 250px;
     width: 100%;
     background-color: var(--Rosado);
     border-radius: 20px;
     max-height: 400px;
     overflow: hidden;
 
-    cursor: pointer;
     display:flex;
+    justify-content:center;
     flex-direction:column;
+    align-items:center;
+
+    cursor: pointer;
+
 `
 
 const ContenedorImg = styled.div`
@@ -42,16 +47,21 @@ const ContenedorTxt = styled.p`
     align-items: ${props => props.titular ?  'center' : ''};
     border-bottom: ${props => props.titular ?  '4px solid var(--Blanco)' : ''};
     
+    @media (max-width: 600px) {
+        border-bottom: ${props => props.titular ?  'none' : ''};
+        
+    }
     margin: 0;
     padding: 0 10px;
 `
 
-export const CardItem = ({precio = '200', titulo = 'Bolsa elegante', img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq1yeNA97zcgA9B3i8YhsbBdWspwub5gvxRw&s'}) =>{
+export const CardItem = ({precio = '200', titulo = 'Bolsa elegante', img = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq1yeNA97zcgA9B3i8YhsbBdWspwub5gvxRw&s', onclick}) =>{
     return(
-        <CardItemStyled>
+        <CardItemStyled onClick={onclick}>
             <ContenedorImg> <ImgPicture alt = {'Imagen bolsa ' + titulo} src = {img}/>   </ContenedorImg>
             <ContenedorTxt titular>${precio}</ContenedorTxt>
             <ContenedorTxt >{titulo}</ContenedorTxt>
         </CardItemStyled>
     )
 }
+

@@ -104,7 +104,7 @@ export const PaginaLoginUx = () => {
             />
             {Object.keys(errors).length > 0 && <CompErrores errores={errors} />}
             <BtnSubmit type="submit" disabled={isSubmitting}>
-              Subir
+              Ingresar
             </BtnSubmit>
           </ContenedorForm>
         </StyledContenedorAgregarDatos>

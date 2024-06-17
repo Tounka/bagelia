@@ -3,10 +3,10 @@ import { useContext, useEffect } from "react";
 import { PaginaContext } from "./Contexto";
 import { AgregarDatos } from "./Secciones/AgregarDatos";
 import { useNavigate } from "react-router-dom";
-
+import { CatalogoAdmin } from "./Secciones/CatalogoAdmin";
 
 export const PaginaAdmiUx = () => {
-    const { user, setPagina } = useContext(PaginaContext);
+    const { user, pagina } = useContext(PaginaContext);
     const navigate = useNavigate();
     
     useEffect(() => {
@@ -15,10 +15,15 @@ export const PaginaAdmiUx = () => {
           navigate('/login');
         }
       }, [user, navigate]);
-    return(
+
+    const secciones = {
+        agregar_admi: <AgregarDatos />,
+        modificar_admi: <CatalogoAdmin />,
+     
+    };
+    return (
         <>
-            
-            <AgregarDatos />
+            {secciones[pagina] || <p>Página no encontrada  </p>  }
         </>
-    )
+    );
 }

@@ -24,7 +24,7 @@ const MenuStyled = styled.div`
 `
 
 export const Menu = () =>{
- 
+
     return(
         <MenuStyled>
             <BtnNavigateMenu txt='Bolsas' path='bolsas'  />
@@ -39,7 +39,7 @@ export const MenuAdmi = () =>{
     return(
         <MenuStyled>
             <BtnSwitchMenuAdmi txt='Modificar' path='modificar_admi' setPagina={setPagina} />
-            <BtnSwitchMenuAdmi txt='BAGELIA' path='' principal={true} setPagina={setPagina} />
+            <BtnNavigateMenu txt='BAGELIA' path='login' principal={true} />
             <BtnSwitchMenuAdmi txt='Agregar' path='agregar_admi'  setPagina={setPagina} />
         </MenuStyled>
     )

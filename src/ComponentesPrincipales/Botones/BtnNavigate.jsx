@@ -75,6 +75,7 @@ export const BtnSwitchMenuAdmi = ({path, txt, principal, setPagina}) =>{
             top: 0,
             behavior: "smooth" // Para que el scroll sea suave
         });
+        setPagina(path);
         
     }
     return(
@@ -131,6 +132,7 @@ export const BtnSubmit = styled.button`
     overflow: hidden;
     border-radius: 10px;
     background-color: var(--Rosado);
+    color: var(--Dorado);
 
     font-size: 24px;
     font-weight: bold;
