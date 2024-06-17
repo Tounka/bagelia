@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import { PaginaAdmiUx } from "./PaginaAdmiUx";
 import { DisplayAdmi } from "../../ComponentesPrincipales/Displays";
 
-
-export const PaginaAdmi = () => {
+import { PaginaLoginUx } from "../PaginaAdmin/PaginaLoginUx";
+export const PaginaLogin = () => {
   return (
-
+ 
       <DisplayAdmi>
-        <PaginaAdmiUx />
+            <PaginaLoginUx />
       </DisplayAdmi>
+ 
   );
 };
