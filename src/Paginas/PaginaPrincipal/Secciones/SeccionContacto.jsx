@@ -60,6 +60,10 @@ const BtnRedSocialStyled = styled.a`
 
         transition: .2s ease-in;
     }
+    @media (max-width: 400px) {
+        min-width: auto;
+        font-size: 20px;
+    }
 `
 const BtnRedSocial = ({txt, link}) => {
     return(

@@ -10,6 +10,9 @@ const ContenedorCompromisos = styled(ContenedorSeccion)`
     background-color: var(--Blanco);
     width: 100%;
     height: calc(100vh - 80px);
+    @media (max-width: 800px) {
+        height: auto;
+    }   
     padding: 30px;
 `
 const ContenedorHijoCompromisos = styled.div`
