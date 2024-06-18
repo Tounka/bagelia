@@ -58,6 +58,7 @@ const ContenedorItems = styled.div`
     display:flex;
     height:calc(100% - 80px);
     max-height: calc(100vh - 80px) ;
+
     flex-direction:column;
     justify-content: space-around;
     
@@ -66,6 +67,7 @@ const ContenedorItems = styled.div`
         
         gap: 30px;
         padding: ${props => props.contenedor2 ? '0' : '0px'};
+        max-height: fit-content;
     }
 `
 const ContenedorPrincipalCompromisos = styled.div`
